@@ -1,10 +1,12 @@
 # frozen_string_literal: true
 
-class Caclc
+require 'pry'
+
+class CalculationTask183
   def getVal
     puts 'Hi'
   end
 end
 
-calc = Caclc.allocate
+calc = CalculationTask183.allocate
 calc.getVal
