@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+require '../modules/helper.rb'
+
 class CalculationTask323
   def initialize
     @resultData = []
@@ -12,15 +16,20 @@ class CalculationTask323
     data
   end
 
-  def getTask560Result
+  def getTask323Result
     puts 'Enter number n:'
-    @nNumber = gets.chomp.to_i
-    (0..@nNumber - 1).each do |number|
+    number = gets.chomp
+    Helper.isNaturalNumber(number)
+    @nNumber = number.to_i
+    (1..@nNumber - 1).each do |number|
       @resultData << number if (getAllDevidesOfNumber(number) & getAllDevidesOfNumber(@nNumber)).max == 1
     end
     puts "All mutually simple numbers with #{@nNumber} and smaller than it"
-    print @resultData.to_s
+    print "#{@resultData.to_s}\n"
+  rescue Exception => e
+    puts e.message
+    puts 'If you want to try input data one more enter \'y\' or \'Y\' else enter any other for exit:'
+    option = gets.chomp
+    retry if option == 'y' || option == 'Y'
   end
 end
-d = CalculationTask323.new
-d.getTask560Result

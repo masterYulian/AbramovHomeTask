@@ -17,7 +17,7 @@ class CalculationTask560
 
   def getTask560Result
     puts "Start number = #{@startNumber}\nEnd number = #{@endNumber}"
-    puts 'Pairs of numbers:'
+    puts 'All pairs of friendly numbers:'
     (@startNumber..@endNumber - 1).each do |i|
       (i + 1..@endNumber).each do |j|
         if getSumDevidesOfNumber(i) == j && getSumDevidesOfNumber(j) == i
