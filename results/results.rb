@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require '../task560/calculation_task560'
 
 continue = 'y'
