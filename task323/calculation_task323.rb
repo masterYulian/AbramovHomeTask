@@ -1,0 +1,2 @@
+class CalculationTask323
+end
