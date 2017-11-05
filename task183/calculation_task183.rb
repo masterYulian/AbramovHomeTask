@@ -10,11 +10,11 @@ class CalculationTask183
   end
 
   def getTask183Result
-    puts 'Enter count numbers in sequence: '
+    puts 'Enter count numbers in sequence:'
     data = gets.chomp
     Helper.isNaturalNumber(data)
     @countOfNumbers = data.to_i
-    puts 'Enter multiple number: '
+    puts 'Enter multiple number:'
     data = gets.chomp
     @deviderNumber = data.to_i
     puts 'Sequence numbers:'
@@ -30,9 +30,9 @@ class CalculationTask183
     end
   rescue Exception => e
     puts e.message
-    puts 'If you want to try input data one more enter \'y\' or \'Y\' else enter any other for exit:'
-    option = gets.chomp
-    retry if option == 'y' || option == 'Y'
+    puts 'If you want to try input data one more enter \'y\' else enter any other for exit:'
+    option = gets.chomp.downcase
+    retry if option == 'y'
   end
 end
 

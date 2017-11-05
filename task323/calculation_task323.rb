@@ -28,8 +28,8 @@ class CalculationTask323
     print "#{@resultData.to_s}\n"
   rescue Exception => e
     puts e.message
-    puts 'If you want to try input data one more enter \'y\' or \'Y\' else enter any other for exit:'
-    option = gets.chomp
-    retry if option == 'y' || option == 'Y'
+    puts 'If you want to try input data one more enter \'y\' else enter any other for exit:'
+    option = gets.chomp.downcase
+    retry if option == 'y'
   end
 end

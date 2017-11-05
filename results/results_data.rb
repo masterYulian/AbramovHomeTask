@@ -33,8 +33,8 @@ class ResultsData
         else
           puts 'Incorrect option!'
       end
-      puts 'If you want to continue enter \'y\' or \'Y\' else enter any other for exit:'
-      continue = gets.chomp
+      puts 'If you want to continue enter \'y\' else enter any other for exit:'
+      continue = gets.chomp.downcase
     end
     puts 'Bye, bye;)'
   end
