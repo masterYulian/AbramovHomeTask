@@ -11,19 +11,19 @@ class ResultsData
   def getResults
     continue = 'y'
     while continue == 'y' || continue == 'Y'
-      puts '|===========================================|'
-      puts '|                 MENU                      |'
-      puts '|===========================================|'
-      puts '|a). Get multiplication of sequence numbers.|'
-      puts '|b). Get mutually simple numbers.           |'
-      puts '|c). Get all pairs of friendly numbers.     |'
-      puts '|===========================================|'
+      puts '|==================================================|'
+      puts '|                     MENU                         |'
+      puts '|==================================================|'
+      puts '|a). Get sum and count of correct sequence numbers.|'
+      puts '|b). Get mutually simple numbers.                  |'
+      puts '|c). Get all pairs of friendly numbers.            |'
+      puts '|==================================================|'
       puts 'Enter your option:'
       option = gets.chomp.downcase
       case option
         when 'a'
-          task183 = CalculationTask183.new
-          task183.getTask183Result
+          task182 = CalculationTask182.new
+          task182.getTask183Result
         when 'b'
           task323 = CalculationTask323.new
           task323.getTask323Result

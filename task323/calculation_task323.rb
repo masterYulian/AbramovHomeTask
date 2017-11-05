@@ -4,7 +4,7 @@ require '../modules/helper.rb'
 
 class CalculationTask323
   def initialize
-    @resultData = []
+    @sumOfNumbers = []
     @nNumber = 10
   end
 
@@ -22,10 +22,10 @@ class CalculationTask323
     Helper.isNaturalNumber(number)
     @nNumber = number.to_i
     (1..@nNumber - 1).each do |number|
-      @resultData << number if (getAllDevidesOfNumber(number) & getAllDevidesOfNumber(@nNumber)).max == 1
+      @sumOfNumbers << number if (getAllDevidesOfNumber(number) & getAllDevidesOfNumber(@nNumber)).max == 1
     end
     puts "All mutually simple numbers with #{@nNumber} and smaller than it"
-    print "#{@resultData.to_s}\n"
+    print "#{@sumOfNumbers.to_s}\n"
   rescue Exception => e
     puts e.message
     puts 'If you want to try input data one more enter \'y\' else enter any other for exit:'

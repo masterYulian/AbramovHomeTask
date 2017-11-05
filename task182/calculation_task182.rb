@@ -2,32 +2,29 @@
 
 require '../modules/helper.rb'
 
-class CalculationTask183
+class CalculationTask182
   def initialize
-    @countOfNumbers = 10
-    @deviderNumber = 5
-    @resultData = 1
+    @countOfNumbers = 0
+    @sumOfNumbers = 0
+    @nNumber = 2
   end
 
   def getTask183Result
     puts 'Enter count numbers in sequence:'
     data = gets.chomp
     Helper.isNaturalNumber(data)
-    @countOfNumbers = data.to_i
-    puts 'Enter multiple number:'
-    data = gets.chomp
-    @deviderNumber = data.to_i
+    @nNumber= data.to_i
     puts 'Sequence numbers:'
-    (1..@countOfNumbers).each do |_number|
+    (1..@nNumber).each do |_number|
       sequenceNumber = rand(100) + 1
       print("#{sequenceNumber} ")
-      @resultData *= sequenceNumber if (sequenceNumber % @deviderNumber).zero?
+      if ((sequenceNumber % 5) == 0) && ((sequenceNumber % 7) != 0)
+        @sumOfNumbers += sequenceNumber
+        @countOfNumbers += 1
+      end
     end
-    if @resultData == 1
-      puts "\nThere are no numbers divisible by number #{@deviderNumber}"
-    else
-      puts "\nMultiplication of sequence numbers = #{@resultData}"
-    end
+      puts "\nSum of correct numbers from sequence = #{@sumOfNumbers}"
+      puts "Count of correct numbers from sequence = #{@countOfNumbers}"
   rescue Exception => e
     puts e.message
     puts 'If you want to try input data one more enter \'y\' else enter any other for exit:'
@@ -36,4 +33,5 @@ class CalculationTask183
   end
 end
 
-
+c = CalculationTask182.new
+c.getTask183Result

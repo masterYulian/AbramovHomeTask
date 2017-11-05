@@ -10,7 +10,7 @@ class CalculationTask560
   end
 
   def initialize
-    @resultData = SortedSet.new
+    @sumOfNumbers = SortedSet.new
     @startNumber = 200
     @endNumber = 300
   end
@@ -21,7 +21,7 @@ class CalculationTask560
     (@startNumber..@endNumber - 1).each do |i|
       (i + 1..@endNumber).each do |j|
         if getSumDevidesOfNumber(i) == j && getSumDevidesOfNumber(j) == i
-          @resultData.add([i, j])
+          @sumOfNumbers.add([i, j])
           print "#{i}, #{j}\n"
         end
       end
