@@ -33,5 +33,3 @@ class CalculationTask182
   end
 end
 
-c = CalculationTask182.new
-c.getTask183Result

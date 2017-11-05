@@ -2,7 +2,7 @@
 
 require '../task560/calculation_task560'
 require '../task323/calculation_task323'
-require '../task183/calculation_task183'
+require '../task182/calculation_task182'
 
 class ResultsData
   def initialize;
