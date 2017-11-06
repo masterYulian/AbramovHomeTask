@@ -6,7 +6,6 @@ class CalculationTask182
   def initialize
     @countOfNumbers = 0
     @sumOfNumbers = 0
-    @nNumber = 2
   end
 
   def getTask183Result

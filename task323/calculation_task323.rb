@@ -5,7 +5,6 @@ require '../modules/helper.rb'
 class CalculationTask323
   def initialize
     @sumOfNumbers = []
-    @nNumber = 10
   end
 
   def getAllDevidesOfNumber(number)
