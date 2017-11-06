@@ -18,7 +18,7 @@ class ResultsData
       puts '|    of this sequence, which are divided by 5 and  |'
       puts '|    do not divide by 7.                           |'
       puts '|b). get all natural numbers that are smaller for  |'
-      puts '|    the number n and are relatively prime to it   |'
+      puts '|    the number n and are relatively prime to it.  |'
       puts '|c). Find all pairs of friendly numbers lying in   |'
       puts '|    the range from 200 to 300.                    |'
       puts '|==================================================|'
